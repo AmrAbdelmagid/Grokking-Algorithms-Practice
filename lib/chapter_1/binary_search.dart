@@ -1,7 +1,7 @@
 /// Returns the position of the item if found or null if not found, searching in
 /// sorted list.
 /// Normal search needs n number of times (linear time) to search while binary
-///  search needs log(2) n times (logarithmic or log time).
+/// search needs log(2) n times (logarithmic or log time).
 int? binarySearch(List<int> list, int item) {
   var low = 0;
   var high = list.length - 1;
