@@ -46,6 +46,7 @@ void lookForKeyRecursive(List box) {
     if (item is List) {
       lookForKeyRecursive(item); // Recursion
     } else if (item == 4) {
+      // Base case (where the recursion will stop)
       print('found the key! -- recursion');
     }
   }
