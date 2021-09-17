@@ -1,18 +1,21 @@
-List<int?> quicksort(List<int?> list) {
+import 'dart:math';
+
+List<int> quicksort(List<int> list) {
   if (list.length < 2) {
     return list;
   }
-  int? pivot = list[0];
-  List<int?> less = [];
+  final pivot = list[Random().nextInt(
+      list.length - 1)]; // made pivot random to enhance quicksort performance
+  List<int> less = [];
   list.forEach((element) {
-    if (element! < (pivot as int)) {
+    if (element < (pivot as int)) {
       less.add(element);
     }
   });
 
-  List<int?> greater = [];
+  List<int> greater = [];
   list.forEach((element) {
-    if (element! > (pivot as int)) {
+    if (element > (pivot as int)) {
       greater.add(element);
     }
   });
